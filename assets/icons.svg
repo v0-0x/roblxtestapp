@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<!-- Aniko's wordmark (Fredoka SemiBold, as one path), from the app's Sidebar.tsx -->
+<symbol id="wordmark" viewBox="0 0 125.6 38"><path fill="currentColor" d="M33.26 31.42Q33.85 32.65 33.9 33.5Q33.95 34.36 33.39 35.02Q32.82 35.68 31.55 36.32Q29.6 37.24 28.52 36.88Q27.44 36.51 26.51 34.55L16.93 14.5L7.39 34.55Q6.41 36.46 5.36 36.83Q4.31 37.2 2.35 36.27Q1.08 35.68 0.52 35.02Q-0.04 34.36 0 33.45Q0.05 32.55 0.69 31.33L13.55 4.57Q14.04 3.59 15 3.01Q15.95 2.42 16.98 2.42Q17.71 2.42 18.35 2.69Q18.98 2.96 19.5 3.45Q20.01 3.93 20.35 4.62ZM8.71 28.64 11.74 22.33H22.16L25.19 28.64ZM40.45 36.56Q38.65 36.56 37.89 36.05Q37.13 35.53 36.96 34.68Q36.79 33.82 36.79 32.89V15.67Q36.79 14.74 36.98 13.94Q37.18 13.13 37.94 12.64Q38.69 12.15 40.5 12.15Q42.07 12.15 42.8 12.57Q43.54 12.98 43.76 13.57Q43.98 14.16 43.98 14.67Q43.98 15.18 44.07 15.38L43.78 16.31Q43.88 15.58 44.54 14.82Q45.2 14.06 46.2 13.45Q47.2 12.84 48.35 12.49Q49.5 12.15 50.63 12.15Q52.98 12.15 54.81 13.01Q56.65 13.86 57.92 15.48Q59.19 17.09 59.85 19.27Q60.51 21.45 60.51 24.04V32.94Q60.51 33.87 60.34 34.73Q60.17 35.58 59.41 36.07Q58.65 36.56 56.84 36.56Q54.98 36.56 54.22 36.05Q53.47 35.53 53.27 34.68Q53.07 33.82 53.07 32.89V24.04Q53.07 22.57 52.59 21.54Q52.1 20.52 51.12 19.95Q50.14 19.39 48.72 19.39Q47.3 19.39 46.28 19.98Q45.25 20.57 44.69 21.59Q44.12 22.62 44.12 24.04V32.94Q44.12 33.87 43.95 34.73Q43.78 35.58 43.02 36.07Q42.26 36.56 40.45 36.56ZM68.73 36.61Q66.92 36.61 66.16 36.1Q65.4 35.58 65.23 34.73Q65.06 33.87 65.06 32.94V15.87Q65.06 14.89 65.23 14.06Q65.4 13.23 66.18 12.71Q66.97 12.2 68.78 12.2Q70.54 12.2 71.29 12.74Q72.05 13.28 72.22 14.11Q72.4 14.94 72.4 15.97V32.99Q72.4 33.92 72.22 34.77Q72.05 35.63 71.29 36.12Q70.54 36.61 68.73 36.61ZM68.73 8.63Q66.87 8.63 66.09 8.09Q65.3 7.55 65.13 6.67Q64.96 5.79 64.96 4.82Q64.96 3.79 65.16 2.93Q65.35 2.08 66.13 1.56Q66.92 1.05 68.78 1.05Q70.59 1.05 71.37 1.59Q72.15 2.12 72.32 3.01Q72.49 3.89 72.49 4.86Q72.49 5.84 72.32 6.72Q72.15 7.6 71.37 8.12Q70.59 8.63 68.73 8.63ZM97.34 29.96Q98.86 31.28 98.95 32.48Q99.05 33.67 97.63 35.24Q96.56 36.36 95.75 36.71Q94.94 37.05 94.16 36.73Q93.38 36.41 92.35 35.48L84.62 28.73V32.94Q84.62 33.92 84.45 34.75Q84.28 35.58 83.52 36.1Q82.76 36.61 80.95 36.61Q79.19 36.61 78.41 36.1Q77.63 35.58 77.46 34.73Q77.29 33.87 77.29 32.89V4.67Q77.29 3.69 77.48 2.86Q77.68 2.03 78.46 1.51Q79.24 1 81 1Q82.76 1 83.52 1.51Q84.28 2.03 84.45 2.88Q84.62 3.74 84.62 4.72V19.49L90.1 14.21Q91.08 13.28 91.94 12.93Q92.79 12.59 93.62 12.89Q94.45 13.18 95.38 14.21Q96.95 15.92 96.9 16.97Q96.85 18.02 95.38 19.49L90.1 24.28ZM112.55 37Q110.25 37 107.98 36.1Q105.7 35.19 103.85 33.53Q101.99 31.86 100.91 29.54Q99.84 27.22 99.84 24.38Q99.84 21.74 100.81 19.46Q101.79 17.19 103.55 15.43Q105.31 13.67 107.59 12.67Q109.86 11.66 112.45 11.66Q115.98 11.66 118.84 13.35Q121.7 15.04 123.41 17.92Q125.12 20.81 125.12 24.33Q125.12 27.32 124.02 29.64Q122.92 31.96 121.09 33.63Q119.25 35.29 117.03 36.14Q114.8 37 112.55 37ZM112.45 29.61Q113.63 29.61 114.85 29.03Q116.07 28.44 116.91 27.27Q117.74 26.09 117.74 24.28Q117.74 22.72 117.05 21.54Q116.37 20.37 115.17 19.71Q113.97 19.05 112.41 19.05Q110.94 19.05 109.79 19.73Q108.64 20.42 107.93 21.62Q107.22 22.82 107.22 24.33Q107.22 26.09 108.03 27.29Q108.84 28.49 110.06 29.05Q111.28 29.61 112.45 29.61Z"/></symbol>
+<!-- Icons: 24 px grid, drawn for this site, stroked in the text colour -->
+<symbol id="home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+<symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+<symbol id="compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+<symbol id="drive" viewBox="0 0 24 24"><path d="M3 13h18M5.5 5h13L21 13v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5zM7 16h.01M11 16h.01"/></symbol>
+<symbol id="list" viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></symbol>
+<symbol id="calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="book" viewBox="0 0 24 24"><path d="M12 6c-2-1.3-4.5-2-8-2v14c3.5 0 6 .7 8 2 2-1.3 4.5-2 8-2V4c-3.5 0-6 .7-8 2zM12 6v14"/></symbol>
+<symbol id="blocks" viewBox="0 0 24 24"><path d="M4 4h7v7H4zM4 13h7v7H4zM13 13h7v7h-7zM16.5 3.5v7M13 7h7"/></symbol>
+<symbol id="chart" viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></symbol>
+<symbol id="playlist" viewBox="0 0 24 24"><path d="M4 6h12M4 12h8M4 18h8M16 13l5 3-5 3z"/></symbol>
+<symbol id="spark" viewBox="0 0 24 24"><path d="M12 3q1.3 7.7 9 9-7.7 1.3-9 9-1.3-7.7-9-9 7.7-1.3 9-9z"/></symbol>
+<symbol id="sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></symbol>
+<symbol id="play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></symbol>
+<symbol id="pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+<symbol id="tv" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8"/></symbol>
+<symbol id="monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M9 21h6M12 17v4"/></symbol>
+<symbol id="server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v6c0 4.5 3.2 7.8 7.5 9 4.3-1.2 7.5-4.5 7.5-9V6z"/></symbol>
+<symbol id="sync" viewBox="0 0 24 24"><path d="M20 11A8 8 0 0 0 5.5 6.5L4 8M4 4v4h4M4 13a8 8 0 0 0 14.5 4.500L20 16M20 20v-4h-4"/></symbol>
+<symbol id="download" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5 9.500 17 19 7.500"/></symbol>
+<symbol id="skip" viewBox="0 0 24 24"><path d="M5 5v14l10-7zM19 5v14"/></symbol>
+<symbol id="subtitles" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 12h4M13 12h4M7 15.500h7"/></symbol>
+<symbol id="pip" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><rect x="12" y="12" width="6" height="4" rx="1"/></symbol>
+<symbol id="lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+<symbol id="users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.500"/><path d="M3 20c0-3.500 2.700-6 6-6s6 2.500 6 6"/><circle cx="17.500" cy="9" r="2.500"/><path d="M17 14.500c2.500 0 4.500 2 4.500 5"/></symbol>
+<symbol id="route" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="12" r="2"/><path d="M6 7v10M8 5h4a4 4 0 0 1 4 4v1"/></symbol>
+<symbol id="message" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+<symbol id="bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.500c.700.700 1 1.500 1 2.500h6c0-1 .300-1.800 1-2.500A6 6 0 0 0 12 3z"/></symbol>
+<symbol id="heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.400-7-10a4 4 0 0 1 7-2.500A4 4 0 0 1 19 10c0 5.600-7 10-7 10z"/></symbol>
+<symbol id="alert" viewBox="0 0 24 24"><path d="M12 4 3 19h18zM12 10v4M12 16.500h.01"/></symbol>
+<symbol id="thumb" viewBox="0 0 24 24"><path d="M7 11v9H4v-9zM7 11l4-7a2 2 0 0 1 2 2v3h5a2 2 0 0 1 2 2.300l-1 6a2 2 0 0 1-2 1.700H7"/></symbol>
+<symbol id="terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+<symbol id="code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></symbol>
+<symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></symbol>
+<symbol id="external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+<symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.500 2h-15zM10 21h4"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="folder" viewBox="0 0 24 24"><path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></symbol>
+</svg>

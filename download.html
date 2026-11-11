@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download · Aniko</title>
+<meta name="description" content="Download Aniko for Windows, macOS, Arch Linux, Android TV and Fire TV, or set up mediaserver on a Raspberry Pi.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Download · Aniko">
+<meta property="og:description" content="Download Aniko for Windows, macOS, Arch Linux, Android TV and Fire TV, or set up mediaserver on a Raspberry Pi.">
+<meta property="og:image" content="assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/aniko.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/aniko-256.png">
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script>
+// The saved theme, before the first paint
+(function(){var d=document.documentElement;d.classList.remove("no-js");try{var t=localStorage.getItem("aniko-site-theme");if(t&&t!=="aniko")d.dataset.theme=t;var a=localStorage.getItem("aniko-site-accent");if(a)d.style.setProperty("--brand",a)}catch(e){}})()
+</script>
+</head>
+<body>
+<a class="sr" href="#main">Skip to the page</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="./" aria-label="Aniko, home">
+      <img src="assets/aniko.svg" alt="" width="28" height="28">
+      <svg viewBox="0 0 125.6 38" aria-hidden="true"><use href="assets/icons.svg#wordmark"/></svg>
+    </a>
+    <nav class="nav" id="nav" aria-label="Site">
+      <a href="features.html">Features</a>
+      <a href="download.html" aria-current="page">Download</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="https://github.com/v0-0x/Aniko">GitHub</a>
+    </nav>
+    <a class="btn btn-white btn-sm" href="download.html">Download</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-controls="nav" aria-expanded="false"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#menu"/></svg></button>
+  </div>
+</header>
+<main class="page" id="main">
+<div class="subhead">
+  <div class="wrap">
+    <h1>Download Aniko</h1>
+    <p class="lede">Free on every system. Installed copies update themselves from their Home page.</p>
+    <label class="switch" style="margin-top:18px"><input type="checkbox" id="beta"><span class="sw"></span>Show the newest beta instead</label>
+  </div>
+</div>
+<section>
+  <div class="wrap">
+    <div class="dl">
+      
+      <div class="card" id="windows" data-os="windows">
+        <div class="dl-head"><div class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#monitor"/></svg></div><div><h2>Windows</h2><span class="ver">Windows 10 or 11, 64-bit</span></div><span class="chip chip-brand chip-yours" hidden>Your system</span></div>
+        <p>Run the installer: no administrator rights needed. Windows may show a SmartScreen notice the first time, because the app isn't signed; choose More info, then Run anyway.</p>
+        <div class="btn-row"><a class="btn btn-white" href="https://github.com/v0-0x/Aniko/releases"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#external"/></svg>Get it on GitHub</a></div>
+      </div>
+      
+      <div class="card" id="macos" data-os="macos">
+        <div class="dl-head"><div class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#monitor"/></svg></div><div><h2>macOS</h2><span class="ver">macOS 13 or newer, Apple silicon and Intel</span></div><span class="chip chip-brand chip-yours" hidden>Your system</span></div>
+        <p>Open the disk image and drag Aniko to Applications. The first time, allow it under System Settings › Privacy &amp; Security › Open Anyway.</p>
+        <div class="btn-row"><a class="btn btn-white" href="https://github.com/v0-0x/Aniko/releases"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#external"/></svg>Get it on GitHub</a></div>
+      </div>
+      
+      <div class="card" id="android" data-os="android">
+        <div class="dl-head"><div class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#tv"/></svg></div><div><h2>Android TV and Fire TV</h2><span class="ver">Plays the libraries your computers share</span></div><span class="chip chip-brand chip-yours" hidden>Your system</span></div>
+        <p>On a Fire TV, install the Downloader app, allow it to install unknown apps, and open the APK's address in it. Then turn on Library sharing on a computer with Aniko.</p>
+        <div class="btn-row"><a class="btn btn-white" href="https://github.com/v0-0x/Aniko/releases"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#external"/></svg>Get it on GitHub</a></div>
+      </div>
+      
+      <div class="card" id="linux" data-os="linux">
+        <div class="dl-head"><div class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#terminal"/></svg></div><div><h2>Arch Linux</h2><span class="ver">Built from source with makepkg</span></div><span class="chip chip-brand chip-yours" hidden>Your system</span></div>
+        <p>Three commands. Aniko then updates itself with its Update button.</p>
+        <pre class="cmd"><code>sudo pacman -S --needed base-devel go nodejs npm electron mpv ffmpeg
+git clone https://github.com/v0-0x/Aniko aniko
+cd aniko/packaging/arch &amp;&amp; makepkg -si</code><button type="button" aria-label="Copy the commands"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#copy"/></svg></button></pre>
+      </div>
+      
+      <div class="card" id="server">
+        <div class="dl-head"><div class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#server"/></svg></div><div><h2>Raspberry Pi and other home servers</h2><span class="ver">mediaserver, for a computer that stays on</span></div></div>
+        <p>Shares its library with every Aniko at home, converts video for devices that need it, and keeps them all in step. One install script.</p>
+        <div class="btn-row"><a class="btn btn-white" href="https://github.com/v0-0x/mediaserver"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#external"/></svg>Get mediaserver</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="head"><h2>The first five minutes</h2></div>
+    <ol class="steps">
+      <li class="card"><h3>Pick your library folder</h3><p>Settings › Local library. Choose the folder with your anime and save: the first scan starts by itself.</p></li>
+      <li class="card"><h3>Log in with AniList</h3><p>Click your avatar, then Log in with AniList. It's optional: without it your list stays on your computer.</p></li>
+      <li class="card"><h3>Add your TV</h3><p>Install Aniko on the TV, then turn on Library sharing under Settings › Other devices on your computer. The TV shows up there.</p></li>
+    </ol>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="head"><h2>Recent releases</h2><p class="muted">Betas come first; the ones ready for everyone are marked Stable.</p></div>
+    <div class="rel" id="releases" aria-live="polite">
+      <p class="empty">Loading the release list… <noscript>This list needs JavaScript. <a href="https://github.com/v0-0x/Aniko/releases">See every release on GitHub</a>.</noscript></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <nav aria-label="Footer">
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="https://github.com/v0-0x/Aniko">Source code</a>
+      <a href="https://github.com/v0-0x/Aniko/blob/HEAD/LICENSE">Licence</a>
+    </nav>
+    <span>Free under the GPL-3.0 licence</span>
+    <p>Aniko is a personal project. It isn't affiliated with AniList, and it doesn't host or provide any anime: it plays the files you have.</p>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

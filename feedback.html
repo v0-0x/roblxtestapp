@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feedback · Aniko</title>
+<meta name="description" content="Report a problem, ask for a feature or say what you like about Aniko, and see what other people have asked for.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Feedback · Aniko">
+<meta property="og:description" content="Report a problem, ask for a feature or say what you like about Aniko, and see what other people have asked for.">
+<meta property="og:image" content="assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/aniko.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/aniko-256.png">
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script>
+// The saved theme, before the first paint
+(function(){var d=document.documentElement;d.classList.remove("no-js");try{var t=localStorage.getItem("aniko-site-theme");if(t&&t!=="aniko")d.dataset.theme=t;var a=localStorage.getItem("aniko-site-accent");if(a)d.style.setProperty("--brand",a)}catch(e){}})()
+</script>
+</head>
+<body>
+<a class="sr" href="#main">Skip to the page</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="./" aria-label="Aniko, home">
+      <img src="assets/aniko.svg" alt="" width="28" height="28">
+      <svg viewBox="0 0 125.6 38" aria-hidden="true"><use href="assets/icons.svg#wordmark"/></svg>
+    </a>
+    <nav class="nav" id="nav" aria-label="Site">
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="feedback.html" aria-current="page">Feedback</a>
+      <a href="https://github.com/v0-0x/Aniko">GitHub</a>
+    </nav>
+    <a class="btn btn-white btn-sm" href="download.html">Download</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-controls="nav" aria-expanded="false"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#menu"/></svg></button>
+  </div>
+</header>
+<main class="page" id="main">
+<div class="subhead">
+  <div class="wrap">
+    <h1>Tell us what you think</h1>
+    <p class="lede">Found a problem, want a feature, or like something? It all lands in one place, and it gets read.</p>
+  </div>
+</div>
+<section>
+  <div class="wrap fb">
+    <form class="form" id="feedback">
+      <fieldset class="kinds">
+        <legend>What kind of feedback?</legend>
+        <div class="kind"><input type="radio" name="kind" id="k-bug" value="bug" checked><label for="k-bug"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#alert"/></svg>A problem<span>Something broke or looks wrong</span></label></div>
+        <div class="kind"><input type="radio" name="kind" id="k-idea" value="idea"><label for="k-idea"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#bulb"/></svg>An idea<span>Something Aniko should do</span></label></div>
+        <div class="kind"><input type="radio" name="kind" id="k-praise" value="praise"><label for="k-praise"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#heart"/></svg>Something I like<span>So it doesn't get removed</span></label></div>
+      </fieldset>
+      <div class="field">
+        <label for="f-title">In one line</label>
+        <input id="f-title" name="title" required maxlength="120" autocomplete="off" placeholder="The player shows a black screen on my Fire TV">
+      </div>
+      <div class="field">
+        <label for="f-details">The details</label>
+        <textarea id="f-details" name="details" required placeholder="What you did, what you expected, and what happened instead."></textarea>
+      </div>
+      <div class="two">
+        <div class="field">
+          <label for="f-platform">Where</label>
+          <select id="f-platform" name="platform">
+            <option value="">Not sure, or everywhere</option>
+            <option>Windows</option>
+            <option>macOS</option>
+            <option>Arch Linux</option>
+            <option>Android TV / Fire TV</option>
+            <option>mediaserver (Raspberry Pi)</option>
+            <option>This website</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-version">Aniko version</label>
+          <input id="f-version" name="version" maxlength="20" autocomplete="off" placeholder="e.g. 3.0.29">
+          <p class="hint">Settings › Updates &amp; about</p>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-white" type="submit"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#external"/></svg>Send on GitHub</button>
+        <button class="btn btn-line" type="button" id="f-copy"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#copy"/></svg>Copy as text</button>
+        <a class="btn btn-line" id="f-discord" href="#" hidden><svg class="i" aria-hidden="true"><use href="assets/icons.svg#message"/></svg>Post in Discord</a>
+      </div>
+      <p class="form-msg" role="status"></p>
+      <p class="subtle" style="font-size:.875rem">Sending opens GitHub with everything filled in, where a free account posts it. Nothing is sent from this page, and it's public once posted, so leave out anything private.</p>
+    </form>
+    <aside>
+      <div class="side-h"><h2>What people have asked for</h2><a href="https://github.com/v0-0x/Aniko/issues">All of it</a></div>
+      <div class="board" id="board" aria-live="polite"><p class="empty">Loading… <noscript>This list needs JavaScript. <a href="https://github.com/v0-0x/Aniko/issues">See it on GitHub</a>.</noscript></p></div>
+      <p class="subtle" style="font-size:.875rem;margin-top:12px">Want one of these too? Open it and give it a thumbs up: the list is sorted by them.</p>
+      <div class="card tips">
+        <h3>For a problem, these help</h3>
+        <ul class="ticks" style="margin-top:12px">
+          <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#check"/></svg><span>The version, from Settings › Updates &amp; about.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#check"/></svg><span>The device it happened on, and whether the file was local or from another device.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#check"/></svg><span>The log from Settings › Logs &amp; cache, for the time it happened.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#check"/></svg><span>A screenshot or a photo of the TV.</span></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <nav aria-label="Footer">
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="https://github.com/v0-0x/Aniko">Source code</a>
+      <a href="https://github.com/v0-0x/Aniko/blob/HEAD/LICENSE">Licence</a>
+    </nav>
+    <span>Free under the GPL-3.0 licence</span>
+    <p>Aniko is a personal project. It isn't affiliated with AniList, and it doesn't host or provide any anime: it plays the files you have.</p>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
