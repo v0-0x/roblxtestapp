@@ -39,7 +39,8 @@
     set(k, v) { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v) } catch {} },
   }
 
-  // ---- Themes: the app's eight, and a holiday's accent on top ----
+  // ---- Themes: the app's eight, and a holiday's accent and animation on top ----
+  const effectOf = a => { const b = a && $(`[data-accent-pick="${a}"]`); return b ? b.dataset.effect : store.get("aniko-site-effect") || "" }
   function applyTheme(id, accent) {
     if (id && id !== "aniko") root.dataset.theme = id
     else delete root.dataset.theme
@@ -47,6 +48,10 @@
     else root.style.removeProperty("--brand")
     $$("[data-theme-pick]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.themePick === (id || "aniko"))))
     $$("[data-accent-pick]").forEach(b => b.setAttribute("aria-pressed", String(!!accent && b.dataset.accentPick === accent)))
+    // The background (assets/fx.js) takes the new colour, and the holiday's animation
+    const effect = accent ? effectOf(accent) : ""
+    store.set("aniko-site-effect", effect || null)
+    window.dispatchEvent(new CustomEvent("aniko-look", { detail: { effect } }))
   }
   let theme = store.get("aniko-site-theme") || "aniko"
   let accent = store.get("aniko-site-accent") || ""
@@ -63,6 +68,72 @@
     store.set("aniko-site-accent", accent || null)
     applyTheme(theme, accent)
   }))
+
+  // ---- Background effects on or off (the switch in the footer) ----
+  const fxToggle = $("#fx-toggle")
+  if (fxToggle) {
+    const show = () => {
+      const on = !root.classList.contains("fx-off")
+      fxToggle.setAttribute("aria-pressed", String(on))
+      $("span", fxToggle).textContent = "Background effects: " + (on ? "on" : "off")
+    }
+    show()
+    fxToggle.addEventListener("click", () => {
+      const off = root.classList.toggle("fx-off")
+      store.set("aniko-site-fx", off ? "off" : null)
+      show()
+      window.dispatchEvent(new CustomEvent("aniko-look", { detail: { effect: store.get("aniko-site-effect") || "" } }))
+    })
+  }
+
+  // ---- A light that follows the pointer over the panels ----
+  const fine = matchMedia("(hover: hover) and (pointer: fine)").matches
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches
+  if (fine) {
+    $$(".card, .plat, .theme, .flist li, .demo, .rel article, .ask").forEach(n => n.classList.add("lit"))
+    document.addEventListener("pointermove", e => {
+      const n = e.target.closest && e.target.closest(".lit")
+      if (!n) return
+      const r = n.getBoundingClientRect()
+      n.style.setProperty("--mx", e.clientX - r.left + "px")
+      n.style.setProperty("--my", e.clientY - r.top + "px")
+    }, { passive: true })
+  }
+
+  // ---- The app on Home: it leans toward the pointer, and its banner moves on like the app's ----
+  const mock = $(".mock")
+  if (mock) {
+    const win = $(".m-win", mock)
+    if (fine && !calm) {
+      mock.addEventListener("pointermove", e => {
+        const r = mock.getBoundingClientRect()
+        win.style.setProperty("--ry", ((e.clientX - r.left) / r.width - 0.5) * 5 + "deg")
+        win.style.setProperty("--rx", (0.5 - (e.clientY - r.top) / r.height) * 3 + "deg")
+      }, { passive: true })
+      mock.addEventListener("pointerleave", () => { win.style.removeProperty("--rx"); win.style.removeProperty("--ry") })
+    }
+    const SLIDES = [
+      { title: "Lanterns of the Ninth Tide", ep: "Episode 7", rest: " of 12 · 14 min left", bar: 42, h: 22 },
+      { title: "Paper Moon Courier", ep: "Episode 3", rest: " of 24 · 6 min left", bar: 74, h: 205 },
+      { title: "Hollow Signal", ep: "Episode 2", rest: " of 13 · 9 min left", bar: 61, h: 325 },
+    ]
+    const copy = $(".m-copy", mock), art = $(".m-art", mock), dots = $$(".m-dots i", mock)
+    let at = 0, seen = false
+    if ("IntersectionObserver" in window) new IntersectionObserver(es => { seen = es[0].isIntersecting }).observe(mock)
+    if (!calm) setInterval(() => {
+      if (!seen || document.hidden) return
+      at = (at + 1) % SLIDES.length
+      const s = SLIDES[at]
+      copy.classList.add("out")
+      art.style.setProperty("--h", s.h)
+      setTimeout(() => {
+        for (const k of ["title", "ep", "rest"]) $(`[data-m="${k}"]`, copy).textContent = s[k]
+        $('[data-m="bar"]', copy).style.width = s.bar + "%"
+        dots.forEach((d, i) => d.classList.toggle("on", i === at))
+        copy.classList.remove("out")
+      }, 360)
+    }, 5200)
+  }
 
   // ---- Menu on phones ----
   const toggle = $(".nav-toggle"), nav = $(".nav")

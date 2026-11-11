@@ -13,8 +13,9 @@ It's plain HTML, CSS and JavaScript. There is nothing to build and nothing to in
 | `download.html` | Downloads for each system, the first steps, recent releases |
 | `feedback.html` | The feedback form and the list of what people have asked for |
 | `404.html` | Shown for addresses that don't exist |
-| `assets/site.css` | All the styles. The colours are Aniko's own eight themes |
-| `assets/site.js` | Themes, the phone menu, downloads and feedback |
+| `assets/site.css` | All the styles, in Aniko 3.0's Glass look. The colours are Aniko's own eight themes |
+| `assets/site.js` | Themes, the phone menu, downloads, feedback, and the small motions (the app's banner moving on, the light under the pointer) |
+| `assets/fx.js` | The background: drifting sparks, a shooting one now and then, and each holiday's animation |
 | `assets/icons.svg` | The icons and the Aniko wordmark |
 
 The header and footer are repeated in each page, so a change to one goes in all five.
@@ -38,6 +39,10 @@ Then open `http://localhost:8000`. Opening the files directly (`file://`) won't 
 - **What people have asked for** lists the repository's open issues, most thumbs up first.
 
 The site sets no cookies and loads nothing from anywhere else. The chosen theme is remembered in the browser.
+
+## The background
+
+Behind the page, three soft lights in the theme's colour drift slowly (CSS only), and `assets/fx.js` draws sparks shaped like the one in the logo on a canvas. Picking a holiday on the home page plays its animation too: fireworks, hearts, petals, fireflies, bats or snow. It pauses while the tab is hidden, stands still for visitors whose system asks for less motion, and the switch in the footer turns it off.
 
 ## Things to change
 

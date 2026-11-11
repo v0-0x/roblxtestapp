@@ -17,10 +17,11 @@
 <link rel="stylesheet" href="assets/site.css">
 <script>
 // The saved theme, before the first paint
-(function(){var d=document.documentElement;d.classList.remove("no-js");try{var t=localStorage.getItem("aniko-site-theme");if(t&&t!=="aniko")d.dataset.theme=t;var a=localStorage.getItem("aniko-site-accent");if(a)d.style.setProperty("--brand",a)}catch(e){}})()
+(function(){var d=document.documentElement;d.classList.remove("no-js");try{var t=localStorage.getItem("aniko-site-theme");if(t&&t!=="aniko")d.dataset.theme=t;var a=localStorage.getItem("aniko-site-accent");if(a)d.style.setProperty("--brand",a);if(localStorage.getItem("aniko-site-fx")==="off")d.classList.add("fx-off")}catch(e){}})()
 </script>
 </head>
 <body>
+<div class="sky" aria-hidden="true"><i></i><i></i><i></i><canvas id="fx"></canvas></div>
 <a class="sr" href="#main">Skip to the page</a>
 <header class="top">
   <div class="wrap top-in">
@@ -213,10 +214,11 @@
       <a href="https://github.com/v0-0x/Aniko">Source code</a>
       <a href="https://github.com/v0-0x/Aniko/blob/HEAD/LICENSE">Licence</a>
     </nav>
-    <span>Free under the GPL-3.0 licence</span>
-    <p>Aniko is a personal project. It isn't affiliated with AniList, and it doesn't host or provide any anime: it plays the files you have.</p>
+    <button class="fx-toggle" type="button" id="fx-toggle" aria-pressed="true"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#spark"/></svg><span>Background effects: on</span></button>
+    <p>Aniko is a personal project, free under the GPL-3.0 licence. It isn't affiliated with AniList, and it doesn't host or provide any anime: it plays the files you have.</p>
   </div>
 </footer>
 <script src="assets/site.js" defer></script>
+<script src="assets/fx.js" defer></script>
 </body>
 </html>

@@ -17,10 +17,11 @@
 <link rel="stylesheet" href="assets/site.css">
 <script>
 // The saved theme, before the first paint
-(function(){var d=document.documentElement;d.classList.remove("no-js");try{var t=localStorage.getItem("aniko-site-theme");if(t&&t!=="aniko")d.dataset.theme=t;var a=localStorage.getItem("aniko-site-accent");if(a)d.style.setProperty("--brand",a)}catch(e){}})()
+(function(){var d=document.documentElement;d.classList.remove("no-js");try{var t=localStorage.getItem("aniko-site-theme");if(t&&t!=="aniko")d.dataset.theme=t;var a=localStorage.getItem("aniko-site-accent");if(a)d.style.setProperty("--brand",a);if(localStorage.getItem("aniko-site-fx")==="off")d.classList.add("fx-off")}catch(e){}})()
 </script>
 </head>
 <body>
+<div class="sky" aria-hidden="true"><i></i><i></i><i></i><canvas id="fx"></canvas></div>
 <a class="sr" href="#main">Skip to the page</a>
 <header class="top">
   <div class="wrap top-in">
@@ -41,7 +42,8 @@
 <main class="page" id="main">
 <section class="hero">
   <div class="wrap">
-    <h1>Your anime, on every<br>screen at home.</h1>
+    <a class="pill" href="download.html#releases"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#spark"/></svg><b>Aniko 3.0 is out</b><span>A new look, a new player, a faster start</span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#arrow"/></svg></a>
+    <h1><span class="up">Your anime, on every</span><br><span class="up d1">screen at home.</span></h1>
     <p class="lede">Aniko keeps your library, your AniList and your place in every episode together, on your computer and your TV. It's free and open source.</p>
     <div class="btn-row">
       <a class="btn btn-white" href="download.html" data-download-cta><svg class="i" aria-hidden="true"><use href="assets/icons.svg#download"/></svg><span>Download</span></a>
@@ -49,45 +51,49 @@
     </div>
     <p class="hero-meta">Version <span class="num" data-latest>3.0</span> · Windows, macOS, Arch Linux, Android TV and Fire TV</p>
     
-<div class="mock rise" role="img" aria-label="Aniko's Home page: a sidebar, your next episode on a banner, and rows for Continue watching and Currently watching. The shows are made up.">
+<div class="mock rise" role="img" aria-label="Aniko 3.0's Home page: a glass sidebar, your next episode on a wide banner with Resume and Details, and rows of what you're watching. The shows are made up.">
   <div class="m-win" aria-hidden="true">
     <div class="m-side">
       <div class="m-brand"><img src="assets/aniko.svg" alt=""><svg viewBox="0 0 125.6 38"><use href="assets/icons.svg#wordmark"/></svg></div>
-      <div class="m-group">Watch</div>
-      <div class="m-item on"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#home"/></svg>Home</div>
-      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#search"/></svg>Search<kbd>Ctrl K</kbd></div>
-      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#compass"/></svg>Discover</div>
-      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#drive"/></svg>Local library</div>
-      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#list"/></svg>My lists</div>
-      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#calendar"/></svg>Schedule</div>
-      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#book"/></svg>Manga</div>
-      <div class="m-group">Manage</div>
-      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#folder"/></svg>Library tools</div>
-      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#playlist"/></svg>Playlists</div>
-      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#chart"/></svg>Stats</div>
-      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#server"/></svg>Server</div>
+      <div class="m-item on"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#home"/></svg><span>Home</span></div>
+      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#search"/></svg><span>Search</span><kbd>Ctrl K</kbd></div>
+      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#compass"/></svg><span>Discover</span></div>
+      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#drive"/></svg><span>Local library</span></div>
+      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#list"/></svg><span>My lists</span></div>
+      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#calendar"/></svg><span>Schedule</span></div>
+      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#book"/></svg><span>Manga</span></div>
+      <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#download"/></svg><span>Downloads</span><span class="m-badge">2</span></div>
+      <div class="m-more"><div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#chev-r"/></svg><span>More</span></div></div>
       <div class="m-foot">
-        <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#spark"/></svg>Themes</div>
-        <div class="m-item"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#sliders"/></svg>Settings</div>
+        <div class="m-icons"><span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#spark"/></svg></span><span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#bell"/></svg></span><span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#sliders"/></svg></span></div>
+        <div class="m-user"><i></i><span><b>mika</b><span>In step with AniList</span></span></div>
       </div>
     </div>
     <div class="m-panel">
-      <div class="m-banner">
-        <span class="m-moon"></span>
-        <span class="m-kicker">Your next episode · Episode 7 of 12</span>
-        <span class="m-title">Lanterns of the Ninth Tide</span>
-        <div class="m-btns"><span class="m-btn w"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#play"/></svg>Resume · Ep 7</span><span class="m-btn">Details</span></div>
+      <div class="m-hero">
+        <div class="m-art"><span class="m-moon"></span><span class="m-ridge a"></span><span class="m-ridge b"></span></div>
+        <div class="m-tools"><span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#dice"/></svg></span><span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#folder"/></svg></span><span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#sync"/></svg></span><span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#dots"/></svg></span></div>
+        <div class="m-copy">
+          <span class="m-kicker">Continue watching</span>
+          <span class="m-title" data-m="title">Lanterns of the Ninth Tide</span>
+          <span class="m-line"><span data-m="ep">Episode 7</span><em data-m="rest"> of 12 · 14 min left</em></span>
+          <span class="m-prog"><i data-m="bar" style="width:42%"></i></span>
+          <div class="m-btns"><span class="m-btn w"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#play"/></svg>Resume</span><span class="m-btn">Details</span></div>
+        </div>
+        <div class="m-pager"><span class="m-dots"><i class="on"></i><i></i><i></i></span><span class="m-round"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#chev-l"/></svg></span><span class="m-round"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#chev-r"/></svg></span></div>
       </div>
-      <div class="m-h">Continue watching</div>
-      <div class="m-row">
-        <div class="m-ep"><div class="art" style="--h:22"><div class="bar"><i style="width:42%"></i></div></div><b>Lanterns of the Ninth Tide</b><span>Ep 7 · 14 min left</span></div>
-        <div class="m-ep"><div class="art" style="--h:200"><div class="bar"><i style="width:74%"></i></div></div><b>Paper Moon Courier</b><span>Ep 3 · 6 min left</span></div>
-        <div class="m-ep"><div class="art" style="--h:140"><div class="bar"><i style="width:12%"></i></div></div><b>Saltwind Academy</b><span>Ep 11 · 21 min left</span></div>
-        <div class="m-ep"><div class="art" style="--h:320"><div class="bar"><i style="width:61%"></i></div></div><b>Hollow Signal</b><span>Ep 2 · 9 min left</span></div>
-      </div>
-      <div class="m-h">Currently watching</div>
-      <div class="m-covers">
-        <div class="art" style="--h:250"></div><div class="art" style="--h:22"></div><div class="art" style="--h:200"></div><div class="art" style="--h:140"></div><div class="art" style="--h:320"></div><div class="art" style="--h:95"></div><div class="art" style="--h:285"></div>
+      <div class="m-rows">
+        <div class="m-row">
+          <div class="m-ep"><div class="art" style="--h:22"><div class="bar"><i style="width:42%"></i></div></div><b>Episode 7 of 12</b><span>Lanterns of the Ninth Tide</span></div>
+          <div class="m-ep"><div class="art" style="--h:205"><div class="bar"><i style="width:74%"></i></div></div><b>Episode 3 of 24</b><span>Paper Moon Courier</span></div>
+          <div class="m-ep"><div class="art" style="--h:325"><div class="bar"><i style="width:61%"></i></div></div><b>Episode 2 of 13</b><span>Hollow Signal</span></div>
+          <div class="m-ep"><div class="art" style="--h:140"><div class="bar"><i style="width:12%"></i></div></div><b>Episode 11 of 12</b><span>Saltwind Academy</span></div>
+        </div>
+        <div class="m-chips"><span class="on">All</span><span>Action</span><span>Adventure</span><span>Comedy</span><span>Drama</span><span>Fantasy</span><span>Mystery</span><span>Slice of Life</span></div>
+        <div class="m-h">Watching <span>12</span></div>
+        <div class="m-covers">
+          <div class="art" style="--h:250"></div><div class="art" style="--h:22"></div><div class="art" style="--h:205"></div><div class="art" style="--h:140"></div><div class="art" style="--h:325"></div><div class="art" style="--h:95"></div><div class="art" style="--h:285"></div><div class="art" style="--h:180"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -98,6 +104,12 @@
 
 <section>
   <div class="wrap">
+    <div class="facts rise">
+      <div><b class="num">5</b><span>systems, from a Fire TV stick to a Raspberry Pi</span></div>
+      <div><b class="num">8</b><span>colour themes, and any accent you like</span></div>
+      <div><b class="num">6</b><span>holiday themes that come on by themselves</span></div>
+      <div><b class="num">0</b><span>ads, trackers or accounts of its own</span></div>
+    </div>
     <div class="grid g3">
       <div class="card rise"><div class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#drive"/></svg></div><h3>It sorts your library</h3><p>Point Aniko at your anime folders. It reads every file name, works out the show, season and episode, and brings in covers, descriptions and episode titles.</p></div>
       <div class="card rise"><div class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#play"/></svg></div><h3>It plays any file</h3><p>Watch in the built-in player or in mpv. When a device can't play a file as it is, Aniko converts it while you watch.</p></div>
@@ -109,6 +121,7 @@
 <section>
   <div class="wrap split">
     <div class="rise">
+      <p class="eyebrow"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#spark"/></svg>The player</p>
       <h2>Press play. Aniko remembers the rest.</h2>
       <p>Every episode opens where you stopped, with the audio and subtitles you chose last time.</p>
       <ul class="ticks">
@@ -120,11 +133,14 @@
       </ul>
       <a class="more" href="features.html#watching">Everything about watching <svg class="i" aria-hidden="true"><use href="assets/icons.svg#arrow"/></svg></a>
     </div>
-    <div class="demo rise" role="img" aria-label="The player: floating controls, a subtitle line and a Skip opening button.">
+    <div class="demo rise" role="img" aria-label="The 3.0 player: a glass panel of controls floating over the picture, a subtitle line and a Skip opening button.">
       <div class="player" aria-hidden="true">
         <div class="p-sub">We leave before the tide turns.</div>
         <span class="p-skip btn btn-white btn-sm">Skip opening</span>
-        <div class="p-ctl"><svg class="i line" aria-hidden="true"><use href="assets/icons.svg#pause"/></svg><span class="num">2:41</span><span class="p-seek"><i></i></span><span class="num">23:40</span><svg class="i line" aria-hidden="true"><use href="assets/icons.svg#subtitles"/></svg><svg class="i line" aria-hidden="true"><use href="assets/icons.svg#pip"/></svg></div>
+        <div class="p-ctl">
+          <span class="p-seek"><i></i></span>
+          <div class="p-row"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#pause"/></svg><svg class="i" aria-hidden="true"><use href="assets/icons.svg#skip"/></svg><span class="num">2:41 <em>/ 23:40</em></span><b>Episode 7 · The Harbour Bell</b><svg class="i line" aria-hidden="true"><use href="assets/icons.svg#subtitles"/></svg><svg class="i line" aria-hidden="true"><use href="assets/icons.svg#pip"/></svg><svg class="i line" aria-hidden="true"><use href="assets/icons.svg#full"/></svg></div>
+        </div>
       </div>
     </div>
   </div>
@@ -133,6 +149,7 @@
 <section>
   <div class="wrap split flip">
     <div class="rise">
+      <p class="eyebrow"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#spark"/></svg>Your devices</p>
       <h2>Start on the PC. Finish on the TV.</h2>
       <p>Aniko apps on your home network find each other. Turn on sharing on the computer that has the files, and its library shows up on the others, ready to play.</p>
       <ul class="ticks">
@@ -157,6 +174,7 @@
 <section>
   <div class="wrap split">
     <div class="rise">
+      <p class="eyebrow"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#spark"/></svg>Watch order</p>
       <h2>Always know what comes next.</h2>
       <p>Every anime's page lists its whole franchise in story order and in release order, with movies, recaps and side stories marked.</p>
       <ul class="ticks">
@@ -183,6 +201,7 @@
 <section>
   <div class="wrap split flip">
     <div class="rise">
+      <p class="eyebrow"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#spark"/></svg>Parental controls</p>
       <h2>Made for a shared home.</h2>
       <p>Set what each device may show from your own computer, and lock it with a PIN.</p>
       <ul class="ticks">
@@ -206,8 +225,9 @@
 <section id="themes">
   <div class="wrap">
     <div class="head rise">
+      <p class="eyebrow"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#spark"/></svg>Themes</p>
       <h2>Make it yours.</h2>
-      <p class="lede">Eight colour themes, any accent colour, and six holiday themes that come on by themselves in their month. Pick one: this page changes with it.</p>
+      <p class="lede">Eight colour themes, any accent colour, and six holiday themes that come on by themselves in their month. Pick one: this page changes with it, animation included.</p>
     </div>
     <div class="themes rise">
 <button class="theme" type="button" data-theme-pick="aniko" aria-pressed="true" style="--a:#7c6cf2;--f:#0a0a0b;--b:#111113;--p:#1c1c1f"><span class="pic" aria-hidden="true"><i></i><u><s></s></u></span><span class="name">Aniko<svg class="i" aria-hidden="true"><use href="assets/icons.svg#check"/></svg></span></button>
@@ -220,12 +240,12 @@
 <button class="theme" type="button" data-theme-pick="black" aria-pressed="false" style="--a:#7c6cf2;--f:#000000;--b:#000000;--p:#121214"><span class="pic" aria-hidden="true"><i></i><u><s></s></u></span><span class="name">Black<svg class="i" aria-hidden="true"><use href="assets/icons.svg#check"/></svg></span></button>
     </div>
     <div class="holidays rise" aria-label="Holiday accents">
-<button class="holiday" type="button" data-accent-pick="#f5c542" aria-pressed="false" style="--c:#f5c542"><i aria-hidden="true"></i>New Year <small>fireworks, January</small></button>
-<button class="holiday" type="button" data-accent-pick="#f2557a" aria-pressed="false" style="--c:#f2557a"><i aria-hidden="true"></i>Valentine's Day <small>hearts, February</small></button>
-<button class="holiday" type="button" data-accent-pick="#f9a8d4" aria-pressed="false" style="--c:#f9a8d4"><i aria-hidden="true"></i>Cherry blossoms <small>petals, April</small></button>
-<button class="holiday" type="button" data-accent-pick="#2dd4bf" aria-pressed="false" style="--c:#2dd4bf"><i aria-hidden="true"></i>Summer festival <small>fireflies, August</small></button>
-<button class="holiday" type="button" data-accent-pick="#f97316" aria-pressed="false" style="--c:#f97316"><i aria-hidden="true"></i>Halloween <small>bats, October</small></button>
-<button class="holiday" type="button" data-accent-pick="#ef4444" aria-pressed="false" style="--c:#ef4444"><i aria-hidden="true"></i>Christmas <small>snow, December</small></button>
+<button class="holiday" type="button" data-accent-pick="#f5c542" data-effect="fireworks" aria-pressed="false" style="--c:#f5c542"><i aria-hidden="true"></i>New Year <small>fireworks, January</small></button>
+<button class="holiday" type="button" data-accent-pick="#f2557a" data-effect="hearts" aria-pressed="false" style="--c:#f2557a"><i aria-hidden="true"></i>Valentine's Day <small>hearts, February</small></button>
+<button class="holiday" type="button" data-accent-pick="#f9a8d4" data-effect="petals" aria-pressed="false" style="--c:#f9a8d4"><i aria-hidden="true"></i>Cherry blossoms <small>petals, April</small></button>
+<button class="holiday" type="button" data-accent-pick="#2dd4bf" data-effect="fireflies" aria-pressed="false" style="--c:#2dd4bf"><i aria-hidden="true"></i>Summer festival <small>fireflies, August</small></button>
+<button class="holiday" type="button" data-accent-pick="#f97316" data-effect="bats" aria-pressed="false" style="--c:#f97316"><i aria-hidden="true"></i>Halloween <small>bats, October</small></button>
+<button class="holiday" type="button" data-accent-pick="#ef4444" data-effect="snow" aria-pressed="false" style="--c:#ef4444"><i aria-hidden="true"></i>Christmas <small>snow, December</small></button>
     </div>
   </div>
 </section>
@@ -233,6 +253,7 @@
 <section>
   <div class="wrap">
     <div class="head rise">
+      <p class="eyebrow"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#spark"/></svg>Privacy</p>
       <h2>It stays in your home.</h2>
       <p class="lede">Aniko runs on your own computer. It has no account of its own, no ads and no tracking, and nothing on the internet can reach it.</p>
     </div>
@@ -298,10 +319,11 @@
       <a href="https://github.com/v0-0x/Aniko">Source code</a>
       <a href="https://github.com/v0-0x/Aniko/blob/HEAD/LICENSE">Licence</a>
     </nav>
-    <span>Free under the GPL-3.0 licence</span>
-    <p>Aniko is a personal project. It isn't affiliated with AniList, and it doesn't host or provide any anime: it plays the files you have.</p>
+    <button class="fx-toggle" type="button" id="fx-toggle" aria-pressed="true"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#spark"/></svg><span>Background effects: on</span></button>
+    <p>Aniko is a personal project, free under the GPL-3.0 licence. It isn't affiliated with AniList, and it doesn't host or provide any anime: it plays the files you have.</p>
   </div>
 </footer>
 <script src="assets/site.js" defer></script>
+<script src="assets/fx.js" defer></script>
 </body>
 </html>
